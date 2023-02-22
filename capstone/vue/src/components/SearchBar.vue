@@ -1,26 +1,18 @@
 <template>
-  <div>
-    <div class="container">
-    <form @submit.prevent="search">
-      <div class="input-and-select">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" v-model="query" placeholder="Get sucked into..." />
-        <button href="search" type="submit" class="submit-search">Search</button>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="container">          
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <form @submit.prevent="search">        
+        <div class="input-and-select">
+          <input type="text" v-model="query" placeholder="Search Vortex..." />
           <select v-model="selectedSearchOption" class="dropdown-input">
-            <option
-              v-for="(options, key) in searchOptions"
-              :key="key"
-              :value="options">
+            <option v-for="(options, key) in searchOptions" :key="key" :value="options">
               {{ options.text }}
             </option>
-          </select>
-        
-      </div>
-      
-    </form>
+          </select>        
+          <button href="search" type="submit" class="submit-search">Go</button>
+        </div>
+      </form>
     </div>
-  </div>
 </template>
 
 <script>
@@ -62,85 +54,68 @@ export default {
 </script>
 
 <style scoped>
-
-.container{
+.container {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding-bottom: 50px;
+  justify-content: space-between;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #f5f5f5;
+  padding: 0 20px;
 }
 
-input{
-  padding-right: 8vw;
-  margin-left: 0vw;
-}
-
-.input-and-select{
+.input-and-select {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  margin-right: 0px;
+  height: 100%;
+  flex: 1;
+  padding-left: 20px;
+  width: 70%;
 }
-i{
-  margin-top: 50px;
-  font-size: 11pt;
-  margin-right: 4px;
+
+i {
+  margin-right: 10px;
+  font-size: 18px;
   color: #23468A;
 }
-input[type="text"]{
-    border: none;
-    outline: none;
-    background-color: #ececec;
-    margin-bottom: 20px;
-    /* flex-grow: 1; */
-    margin-top: 70px;
-    font-size: 17px;;
-}
-input::placeholder {
-  color: #23468A;
-  display: flex;
-  flex-direction: row;
-  outline-style: none;
-  background-color: #EDEDED;
-  }
-  .select-bar {
-  background-color: #EDEDED;
-  
-  }
 
-.dropdown-input{
-  background-color: #EDEDED;
-  padding: 0px;
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
   border: none;
   outline: none;
-  margin-top: 50px;
+  background-color: transparent;
   color: #23468A;
-  font-size: 17px;
-  
 }
 
-.submit-search{
-  border-radius: 16px;
-  width: 95px;
+.dropdown-input {
+  padding: 5px 10px;
   border: none;
-  padding: 3px;
+  outline: none;
+  background-color: transparent;
+  color: #23468A;
+  font-size: 16px;
+}
+
+.submit-search {
+  padding: 4px 15px;
+  font-size: 15px;
   font-weight: bold;
-  cursor: pointer;
+  color: #fff;
   background-color: #23468A;
-  color: #f3f3f3;
-  margin-top: 52px;
-  margin-left: 0vw;
-  font-size: 17px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
-.submit-search:hover {
-  background-color: #1483d6;
+
+@media screen and (max-width: 767px) {
+ .container {
+  display: none;
 }
-a{
-background-color: #EDEDED;
-margin-left: 300px;
-padding: 10px 20px;
-color: #23468A;
-margin-bottom: 10px;
-width: 5px;
+
 }
+
 </style>

@@ -2,7 +2,7 @@
 <template> 
   <div id="app">
     <div id="nav">
-
+      
       <header>
 
           <router-link v-bind:to="{ name: 'home' }">
@@ -43,36 +43,22 @@ export default{
   }
 }
 </script>
-<style scoped >
-header {
-  width: 100%;
-  height: 80px;
-  border: none;
-  border-bottom: 1px solid #d8d8d8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-area: header;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  background-color: #fcfcfc;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
 
-.search-container{
-  border: 1px solid #d8d8d8;
-  border-radius: 25px;
-  padding: 8px 20px;
-  width: 31%;
-  height: 25px;
-  align-items: center;
-  justify-content: center;
-  background-color: #ececec;
-  display: flex; 
-  justify-content: center;
-  flex-direction: column;
-  outline-style: none;
+<style scoped>
+header {
+ width: 100%;
+ height: 80px;
+ border: none;
+ border-bottom: 1px solid #d8d8d8;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ grid-area: header;
+ position: fixed;
+ top: 0;
+ z-index: 1;
+ background-color: #fcfcfc;
+ box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -102,31 +88,50 @@ header {
 #login-button:hover {
   background-color: #1483d6;
 }
+
 i{
   color: #23468A;
 }
 
-@media screen and (max-width: 720px) {
-  .search-container {
-    width: 50%;
-  }
+@media screen and (max-width: 800px) {
   .header-btns {
-    margin-right: 20px;
+    margin-right: 0;
+  }
+  
+  #login-button {
+    width: 70px;
+  }
+  
+  .logo {
+    margin-left: 10px;
   }
 }
 
-@media screen and (max-width: 550px) {
-  .search-container {
-    display: none;
+@media screen and (max-width: 600px) {
+  header {
+    height: 8%;
   }
-  .header-btns {
-    display: none;
-  }
-}
-</style>
-<style>
-body{
-  font-family: 'Cabin';
-}
-</style>
 
+  .logo {
+    margin-left: 0px;
+    height: 40px;
+  }
+  
+  .header-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  #login-button {
+    width: 100%;
+  }
+}
+</style>

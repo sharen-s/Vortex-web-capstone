@@ -2,7 +2,7 @@
 <template>
   <div class="home">
     <div class="posts">
-      <h2>Top 10 Posts Today</h2>
+      <h2></h2>
       <post v-for="post in $store.state.posts" v-bind:key="post.postId" v-bind:post="post" />
     </div>
 
@@ -127,8 +127,12 @@ export default {
     display: flex;
     flex-direction: column;
   }
-
-  @media (max-width: 767px) {
+hr{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+  @media (max-width: 768px) {
     .left-aside {
       width: 100%;
       height: auto;
@@ -184,7 +188,7 @@ export default {
   }
 
  hr{
-   width: 290px;
+   width: 240px;
    margin-left: auto;
    margin-right: auto;
  }
@@ -255,7 +259,37 @@ export default {
   }
 }
 
-  
+  @media only screen and (max-width: 480px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-areas: "posts" "left-aside" "right-aside";
+  }
+  .terms {
+    font-size: 10px;
+  }
+  hr {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #buttons {
+    width: 120px;
+  }
+  .anon-user h3 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .anon-user h3 {
+    font-size: 13px;
+  }
+  #buttons {
+    width: 100px;
+  }
+}
+
 </style>
 
 

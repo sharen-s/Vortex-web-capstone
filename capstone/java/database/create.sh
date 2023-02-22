@@ -1,5 +1,6 @@
 #!/bin/bash
 export PGPASSWORD='postgres1'
+export PGPORT=25432
 BASEDIR=$(dirname $0)
 DATABASE=message_board_db
 psql -U postgres -f "$BASEDIR/dropdb.sql" &&
