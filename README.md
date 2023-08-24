@@ -23,7 +23,7 @@ npm run serve
 ```
 
 ## Usage
-
+  
 
 Feel free to explore all the different components of the application.
 
