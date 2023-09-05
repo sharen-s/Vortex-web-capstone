@@ -26,7 +26,6 @@ npm run serve
   
 
 Feel free to explore all the different components of the application.
-
 ## Contributing
 
 Pull requests are welcome, but no changes.
