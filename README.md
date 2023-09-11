@@ -21,7 +21,6 @@ Once all dependencies are installed, you can run the application on port 8080
 ```bash
 npm run serve
 ```
-
 ## Usage
   
 Feel free to explore all the different components of the application.
