@@ -29,5 +29,4 @@ Feel free to explore all the different components of the application.
 Pull requests are welcome, but no changes.
  
 ## Authors and acknowledgement
- 
 Nick McConnell, Sharen Torres, J. Michael Weber, and Michael Krut
